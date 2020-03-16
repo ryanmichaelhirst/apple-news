@@ -1,20 +1,20 @@
 :root {
-    --primary-color: rgb(62, 100, 255);
-    --complete-color: #27aa80;
-    --text-color: #263646;
+    --primary-color: #141E30;
+    --secondary-color: #243B55;
+    --tertiary-color: #FA4968;
     --disabled-color: #fad6d6;
-    --background-color: #f5eaea;
+    --text-color: #f5eaea;
 }
 
 html {
-    background-color: #f5eaea;
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
 }
 
 body {
-    background-color: #fdfdfd;
     color: var(--text-color);
     font-family: rubik,arial;
     margin: 0;
+    min-height: 100vh;
 }
 
 a {
@@ -36,7 +36,6 @@ label {
 
 h1 {
     font-weight: 400;
-    font-size: 20px;
 }
 
 button, input {
@@ -75,14 +74,171 @@ select {
     height: 40px;
 }
 
-.row {
+.menuBar {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    background-color: #243B55;
+    min-width: 1600px;
 }
 
-#app {
-    margin: 40px auto;
-    max-width: 400px;
+.selected {
+    background-color: var(--tertiary-color);
+}
+
+.menuItem, .logoBlock {
+    padding: 6px 18px;
+}
+
+.menuItem {
+    font-size: 20px;
     text-align: center;
-    padding: 20px 0;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.menuItem:hover {
+    transition: all 0.1s ease-in-out;
+    background-color: var(--tertiary-color);
+}
+
+.savedStoriesBtn {
+    color: white;
+    background-color: var(--tertiary-color);
+}
+
+.attrLink {
+    color: var(--tertiary-color);
+    font-size: 16px;
+}
+
+.attrLink:hover {
+    color: white;
+    background-color: unset;
+}
+
+.logoBlock {
+    background-color: var(--tertiary-color);
+    color: white;
+    position: relative;
+    top: 18px;
+    padding: 20px;
+    border: 2px solid var(--disabled-color);
+}
+
+.homepage {
+    display: flex;
+    margin: 30px;
+}
+
+.section1 {
+    flex: 1 60%;
+}
+
+.section2 {
+    flex: 1 40%;
+}
+
+.sectionCtn {
+    border: 1px solid white;
+    margin: 10px;
+}
+
+
+.articleListCtn {
+    padding: 0 15px;
+}
+
+.articleListCtn-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.section1 > .sectionCtn > .articleListCtn > .articleListCtnTitle {
+    color: #9dc6a7;
+}
+
+.section2 > .sectionCtn > .articleListCtn > .articleListCtnTitle {
+    color: #fbcffc;
+}
+
+.articleSrc {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.articleImg {
+    height: 80%;
+    width: 80%;
+    border-radius: 5px;
+    display: block;
+}
+
+.articleTitle {
+    cursor: pointer;
+}
+
+.articleTime {
+    color: #A3A3A5;
+}
+
+.articlePageCtn {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.articlePageSrc {
+    font-size: 20px;
+}
+
+.articlePageImg {
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+    display: block;
+}
+
+.saveBtn {
+    color: var(--tertiary-color);
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.saveBtn:hover {
+    color: white;
+    background-color: var(--tertiary-color);
+}
+
+.saveBtn.saved {
+    color: white;
+    background-color: var(--tertiary-color);
+}
+
+.savedArticlesPageCtn {
+    margin: 30px;
+}
+
+.savedArticleItem {
+    margin: 15px 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.savedArticleTitle {
+    color: var(--disabled-color);
+    font-size: 20px;
+}
+
+.savedArticleUrl {
+    color: var(--tertiary-color);
 }
